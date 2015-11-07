@@ -1,0 +1,20 @@
+<ion-view view-title="Scanning">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Test Scan</div>
+      <div class="item item-body">
+        <div>
+            <div ng-if="vm.scanResult.text"><strong>Text: </strong> {{ vm.scanResult.text }}</div>
+            <div ng-if="vm.scanResult.format"><strong>Format: </strong> {{ vm.scanResult.format }}</div>
+            <div ng-if="vm.scanResult.cancelled !== null"><strong>Cancelled: </strong> {{ vm.scanResult.cancelled }}</div>
+            <div ng-if="vm.scanResult.error" style="color: red">{{ vm.scanResult.error }}</div>
+            <br />
+
+            <button ng-click="vm.performScan()">Scan</button>
+
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
